@@ -1,5 +1,6 @@
-
 import Foundation
+@testable import MVP_Example
+
 protocol MainViewProtocol {
     func setGreeting(greeting : String)
 }
