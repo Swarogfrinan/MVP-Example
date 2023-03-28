@@ -32,7 +32,9 @@ extension MainViewController : UITableViewDataSource {
 
 extension MainViewController :  UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print([indexPath.row].description)
+        guard let comment = presenter.comments?[indexPath.row] else { return }
+        presenter.tapOnTheComment(comment: comment)
+  
     }
 }
 
