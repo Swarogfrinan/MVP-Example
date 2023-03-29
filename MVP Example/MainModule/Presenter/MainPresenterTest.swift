@@ -50,7 +50,7 @@ final class MainPresenterTest: XCTestCase {
         view = MockView()
         let navigationController = UINavigationController()
         let assemblyBuilder = AssemblyBuilder()
-router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)
+        router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)
         
     }
     
@@ -58,6 +58,12 @@ router = Router(navigationController: navigationController, assemblyBuilder: ass
         view = nil
         networkService = nil
         presenter = nil
+    }
+    
+    func testGapOnComment(comment: Comment?) {
+        let comment = Comment(postId: 1, id: 2, name: "Bar", email: "Baz", body: "Foo")
+        comments.append(comment)
+        router.showDetail(comment: comment)
     }
     
     func testGetSucces() {
@@ -80,4 +86,26 @@ router = Router(navigationController: navigationController, assemblyBuilder: ass
         XCTAssertNotEqual(catchComments?.count,  0)
         XCTAssertEqual(catchComments?.count,  comments.count)
     }
+    func testGetFailure() {
+        let comment = Comment(postId: 1, id: 2, name: "Bar", email: "Baz", body: "Foo")
+        comments.append(comment)
+        
+        view = MockView()
+        networkService = MockNetworkService(comments: [comment])
+        presenter = MainPresenter(view: view, networkService: networkService, router: router)
+        var catchError : Error?
+        
+        networkService.getComments { result in
+            switch result {
+            case .success(let comments):
+                print(comment)
+            case .failure(let error):
+                catchError = error
+            }
+        }
+        XCTAssertNil(catchError)
+    }
+    
+    
+   
 }
