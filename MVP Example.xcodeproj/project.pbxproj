@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		43AB4A9229D2F298005D0388 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AB4A9129D2F298005D0388 /* DetailViewController.xib */; };
 		43AB4A9429D2FA78005D0388 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB4A9329D2FA78005D0388 /* Router.swift */; };
+		43AB4A9829D429AF005D0388 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AB4A9729D429AE005D0388 /* RouterTest.swift */; };
 		43B1EAA229D1AEAA00A04F36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1EAA129D1AEAA00A04F36 /* AppDelegate.swift */; };
 		43B1EAA429D1AEAA00A04F36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1EAA329D1AEAA00A04F36 /* SceneDelegate.swift */; };
 		43B1EAA629D1AEAA00A04F36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1EAA529D1AEAA00A04F36 /* MainViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		43AB4A9129D2F298005D0388 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		43AB4A9329D2FA78005D0388 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		43AB4A9729D429AE005D0388 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 		43B1EA9E29D1AEAA00A04F36 /* MVP Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1EAA129D1AEAA00A04F36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B1EAA329D1AEAA00A04F36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		43B1EAA029D1AEAA00A04F36 /* MVP Example */ = {
 			isa = PBXGroup;
 			children = (
+				43BF1BF129D2EE5600A5181A /* DetailModule */,
 				43B1EAED29D1B02200A04F36 /* MainModule */,
 				43B1EAEB29D1AEE600A04F36 /* Support Files */,
 				43B1EAA729D1AEAA00A04F36 /* Main.storyboard */,
@@ -152,7 +155,7 @@
 			children = (
 				43B1EAEE29D1B02F00A04F36 /* MainPresenter.swift */,
 				43B1EB0C29D1BFDE00A04F36 /* MainPresenterTest.swift */,
-				43BF1BF129D2EE5600A5181A /* DetailModule */,
+				43AB4A9729D429AE005D0388 /* RouterTest.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B1EB0629D1BD1A00A04F36 /* MVP_ExampleTests.swift in Sources */,
+				43AB4A9829D429AF005D0388 /* RouterTest.swift in Sources */,
 				43B1EB0D29D1BFDE00A04F36 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
